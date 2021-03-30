@@ -1,9 +1,9 @@
 {
-  "name": "docker_web_app",
+  "name": "photobiker",
   "version": "1.0.0",
-  "description": "Node.js on Docker",
+  "description": "Reconociendo pilotos en un mar de fotos.",
   "author": "Sebastian Cardona Correa <sebascardonac11@gmail.com>",
-  "main": "server.js",
+  "main": "DetectLabel.js",
   "scripts": {
     "start": "DetectLabel.js"
   },
