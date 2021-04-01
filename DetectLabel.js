@@ -13,6 +13,7 @@ const config = new AWS.Config({
 })
 
 AWS.config.update({region:'us-east-2'});
+
 const client = new AWS.Rekognition();
 const params = {
   Image: {
