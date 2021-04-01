@@ -28,8 +28,6 @@ var photo = null;
   if (err) {
     console.log(err, err.stack); // an error occurred
   } else {
-    console.log(`Detected labels for: ${photo}`)
-
     response.Labels.forEach(label => {
       if (label.Name == 'Motorcycle') {
 
@@ -47,9 +45,7 @@ var photo = null;
   }
 
   function getText(box){
-  	console.log("Informacion de la imagen= ",box);
   	if (box.Height != null){
-  		console.log("Bucket y photo ",bucket,photo);
         const params2 = {
           Image: {
             S3Object: {
@@ -68,6 +64,8 @@ var photo = null;
               }
               ]}
         };
+
+  	console.log("Informacion de la imagen= ", JSON.stringify(params2) );
         client.detectText(params2, function(err, data) {
 	        if (err) console.log(err, err.stack); // an error occurred
 	        else     console.log(data);           // successful response
