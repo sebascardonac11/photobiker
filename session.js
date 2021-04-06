@@ -7,11 +7,14 @@ const bucket = 'motos84' // the bucketname
 
 var params = {Bucket: bucket};
 var s3 = new AWS.S3();
-s3.listObjects(params, function(err, data) {
+/*s3.listObjects(params, function(err, data) {
    if (err){ console.log(err, err.stack); // an error occurred
    }else{               // successful response
    data.Contents.forEach(photo => {
-      const rider = detectRider.getLabel(bucket,photo.Key);   
+      var rider = detectRider.getLabel(bucket,photo.Key); 
+      rider=null;  
     });
  }
- });
+ });*/
+
+var rider = detectRider.getLabel(bucket,"SCC_0049.jpg");

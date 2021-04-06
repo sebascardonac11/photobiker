@@ -65,3 +65,15 @@ client.detectLabels(params, function(err, response) {
     }) // for response.labels
   } // if
 });
+
+/*
+
+ aws rekognition detect-labels --image '{"S3Object":{"Bucket":"motos84","Name":"SCC_0049.jpg"}}'
+
+ aws rekognition detect-text --image '{"S3Object":{"Bucket":"motos84","Name":"SCC_0049.jpg"}}’
+ "BoundingBox": {
+                        "Width": 0.302333265542984,
+                        "Height": 0.3228665888309479,
+                        "Left": 0.5015836358070374,
+                        "Top": 0.3666069805622101
+                    }*/
